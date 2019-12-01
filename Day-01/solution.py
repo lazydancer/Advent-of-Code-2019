@@ -13,14 +13,11 @@ def part_2():
 
 def calculate_fuel(module_weight):
 	total_fuel = 0
-	fuel_calc = lambda x: x // 3 - 2
+	w = module_weight
 
-	fuel = fuel_calc(module_weight)
-	total_fuel += fuel
-
-	while fuel >= 9: # 9 being the lowest "1" value for fuel calc  
-		fuel = fuel_calc(fuel)
-		total_fuel += fuel
+	while w >= 9:
+		w = w // 3 - 2
+		total_fuel += w
 
 	return total_fuel
 
