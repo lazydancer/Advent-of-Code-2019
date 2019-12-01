@@ -1,13 +1,13 @@
+import fileinput
+
 def part_1():
-	input_file = open('input', 'r')
-	module_weights = map(int, input_file)
+	module_weights = map(int, fileinput.input())
 	fuel_calc = lambda x: x // 3 - 2
 
 	return sum(map(fuel_calc, module_weights))	
 
 def part_2():
-	input_file = open('input', 'r')
-	module_weights = map(int, input_file)
+	module_weights = map(int, fileinput.input())
 
 	return sum(map(calculate_fuel, module_weights))
 
