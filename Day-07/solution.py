@@ -1,7 +1,6 @@
 import fileinput
 from itertools import permutations
 
-
 def main():
     program = fileinput.input()
     program = [int(i) for i in program[0].split(',')]
@@ -43,9 +42,5 @@ def intcode_run(program, inputs):
         elif opcode is 8: 
             program[param[3]] = 1 if program[param[1]] == program[param[2]] else 0
         ptr += skip[opcode-1]
-
-
-
-
 
 main()
